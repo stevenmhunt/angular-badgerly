@@ -1,5 +1,5 @@
 # angular-badgerly
-Provides a simple Angular directive for Badgerly.
+Provides a simple Angular directive for [Badgerly](https://github.com/stevenmhunt/badgerly).
 
 ## Installation
 ```
@@ -11,7 +11,7 @@ Provides a simple Angular directive for Badgerly.
 
 ## Example
 ```
-    <badgerly color="gold" size="large" ribbon="red" shape="circle">
+    <badgerly color="gold" size="large" type="ribbon" ribbon="red" shape="circle" border="yes">
       <i class="fa fa-star"></i>
     </badgerly>
 ```
@@ -21,5 +21,5 @@ Provides a simple Angular directive for Badgerly.
 - ribbon
 - size
 - shape
-- type: Lanyard, Ribbon
-- border: true, false
+- type: lanyard, ribbon
+- border: yes, no
