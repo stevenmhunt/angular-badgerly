@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Badgerly Demo</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="http://stevenhunt.me/tools/badgerly/badgerly-0.1.0.css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+    <script type="text/javascript" src="angular-badgerly.js"></script>
+    <script type="text/javascript">
+
+        (function () {
+            var app = angular.module('demoApp', []);
+
+            badgerly(app);
+
+            app.controller('demoCtrl', function ($scope) {
+                $scope.color = 'gold';
+                $scope.size = 'large';
+                $scope.shape = 'circle';
+                $scope.ribbon = 'red';
+                $scope.type = 'ribbon';
+                $scope.border = 'no';
+                $scope.icon = 'fa-tree';
+            });
+        })();
+    </script>
+    <style type="text/css">
+        .controls {
+            position: relative;
+            overflow: hidden;
+        }
+        .controls > div {
+            float: left;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div ng-app="demoApp" ng-controller="demoCtrl">
+
+        <div class="controls">
+            <div>
+                <h2>Color</h2>
+                <select ng-model="color">
+                    <option value="gold">Gold</option>
+                    <option value="silver">Silver</option>
+                    <option value="bronze">Bronze</option>
+                </select>
+            </div>
+            <div>
+                <h2>Size</h2>
+                <select ng-model="size">
+                    <option value="tiny">Tiny</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                    <option value="huge">Huge</option>
+                </select>
+            </div>
+            <div>
+                <h2>Shape</h2>
+                <select ng-model="shape">
+                    <option value="circle">Circle</option>
+                    <option value="square">Square</option>
+                    <option value="diamond">Diamond</option>
+                </select>
+            </div>
+            <div>
+                <h2>Ribbon</h2>
+                <select ng-model="ribbon">
+                    <option value="red">Red</option>
+                    <option value="orange">orange</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                    <option value="purple">Purple</option>
+                    <option value="pink">Pink</option>
+                    <option value="black">Black</option>
+                    <option value="usa">USA</option>
+                    <option value="netherlands">Netherlands</option>
+                    <option value="france">France</option>
+                    <option value="mexico">Mexico</option>
+                    <option value="hungary">Hungary</option>
+                    <option value="italy">Italy</option>
+                    <option value="canada">Canada</option>
+                    <option value="russia">Russia</option>
+                    <option value="germany">Germany</option>
+                    <option value="rainbow">Rainbow</option>
+                </select>
+            </div>
+            <div>
+                <h2>Type</h2>
+                <select ng-model="type">
+                    <option value="ribbon">Single Ribbon</option>
+                    <option value="lanyard">Lanyard</option>
+                </select>
+            </div>
+            <div>
+                <h2>Border?</h2>
+                <input type="checkbox" ng-model="border" ng-true-value="'yes'" ng-false-value="'no'"/>
+            </div>
+            <div>
+                <h2>Icon (font awesome)</h2>
+                <select ng-model="icon">
+                    <option value="fa-trophy">Trophy</option>
+                    <option value="fa-star">Star</option>
+                    <option value="fa-tree">Tree</option>
+                    <option value="fa-heart">Heart</option>
+                </select>
+            </div>
+        </div>
+
+        <badgerly type="{{type}}" color="{{color}}" size="{{size}}" ribbon="{{ribbon}}" shape="{{shape}}" border="{{border}}">
+            <i class="fa {{icon}}"></i>
+        </badgerly>
+    </div>
+</body>
+</html>
