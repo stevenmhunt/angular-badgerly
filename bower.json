@@ -1,0 +1,35 @@
+{
+  "name": "angular-badgerly",
+  "description": "Angular directives for Badgerly.",
+  "main": "angular-badgerly.js",
+  "authors": [
+    "Steven Hunt"
+  ],
+  "dependencies": {
+    "get-size": "~1.2.2",
+    "eventEmitter": "~4.2.11"
+  },
+  "devDependencies": {
+    "badgerly": "~0.1.0"
+  },
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "badgerly",
+    "angular",
+    "badge",
+    "medal"
+  ],
+  "homepage": "https://github.com/stevenmhunt/angular-badgerly",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
